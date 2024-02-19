@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
+	<style>
+	@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+	</style>
+	
+	<style type="text/css">
+		/*
+		html의 기본 크기와 같으므로 변환 없음
+		h1 {
+		font-size: 32px;
+		}
+		p {
+		font-size: 16px;
+		} */
+		
+		/*rem은 html태그 기준(기본 16px)*/
+		/* 이렇게 주고 rem을 주면 32px을 기준으로 한다.
+		html{font-size: 32px}
+		*/
+		h1 {font-size: 1rem;}
+		/* 2rem=16px*2 */
+		p {font-size: 2rem;}
+		#a {font-size: 1.2rem;}
+		
+		/* 부모 기준으로 비율을 조정하는 em단위 */
+		span{font-size: 5em;} /* 현재 p의 크기 32px*2 */
+		
+		/*font-family*/
+		/* 한글폰트값은 ""로 적용, 영어폰트값은 그냥 작성한다. */
+		ul li{font-size: 40px};
+		
+		ul li:nth-of-type(1){font-family: "돋움"}
+		ul li:nth-of-type(2){font-family: serif}
+		
+		/*import를 통한 webfont*/
+		ul li:nth-of-type(3){
+		font-family: "Nanum Pen Script", cursive;
+  		font-weight: 400;
+  		font-style: normal;}
+  				
+		/* link를 통한 webfont */
+		ul li:nth-of-type(4){
+		font-family: "Micro 5", sans-serif;
+  		font-weight: 400;
+  		font-style: normal;
+  		font-size: 40px;}
+		
+		
+	</style>
+</head>
+<body>
+	<!--
+	글자스타일 : font-style
+	글자굵기 : font-weight (대표값 : bold)
+	글자크기 : font-size
+		크기 지정 단위
+		html 기본 폰트 크기 기준 : h1=>32px, p =>16px(기본 글씨)
+		px  => 픽셀, 절대크기(화면의 해상도 단위(ex) 2140*770가 2140*770개의 픽셀로 이루어진 것이다.))
+			픽셀이 많을 수록 px로 지정하면 글씨 등이 작아진다.
+		rem => 최상위 부모인 html 태그를 기준으로 폰트 크기를 설정
+			
+		em  => 부모 요소를 기준으로 폰트 크기를 설정
+		
+	글꼴 : font-family
+		서버에 있는 글꼴이 아닌 각 클라이언트에 있는 글꼴을 사용한다.
+		즉, 서버에 글꼴이 있어도 클라이언트에 없으면 기본글꼴로 나온다.
+		그래서 최근에는 webfont를 사용한다.
+		**webfont 사용법
+		1. 사이트로 이동(ex) https://fonts.google.com/)	
+		2. 원하는 폰트의 embed code(웹 연결 태그 + CSS style적용 태그) 복사하기
+			2-1. import형식은 다른 속성의 style태그를 따로 작성해준다.
+			2-2. link형식은 head태그에 link태그를 작성해서 적용한다.
+		
+	줄간격 : line-heigh :value
+			실숫값 : 줄 간격을 폰트 크기에 맞추어 실수 배율로 지정
+				ex) line-heigh : 1.5 => 글자 크기의 1.5배만큼 줄간격 설정
+			픽셀값 : 줄 간격을 고정된 px 단위로 지정
+		**font-size는 텍스트 자체의 크기이기 때문에 차이가 있다.
+	텍스트 정렬 :
+		text-align-left(왼쪽)
+		text-align-center(가운데)
+		text-align-right(오른쪽)
+		text-align-justify(양쪽 정렬, 마지막 줄은 해당되지 않는다.)
+		
+	-->
+	<h1>HELLO</h1>
+	<h2 id="a">HELLO</h2>
+	<h2>HELLO</h2>
+	<p>안녕하세요 <span>룰루랄라~~~</span></p>
+	안녕하세요
+	<hr>
+	
+	<!-- font-family 사용 -->
+	<ul>
+		<li>글자 서체</li>
+		<li>글자 서체</li>
+		<li>FONT FAMILY</li>
+		<li>FONT FAMILY</li>
+	</ul>
+	
+	
+</body>
+</html>

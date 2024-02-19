@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		/* 블록레벨 인라인 비교 */
+		#p1{border: 1px solid red; width: 100px; heigh:100px;}
+		/* 인라인 요소는 width와 heigh가 적용되지 않는다. */
+		#s1{border: 1px solid blue; width: 100px; heigh:100px;}
+		
+		/* width, height 비교 */
+		article{border: 1px solid red;}
+		article:nth-of-type(1){width: 100px; height: 100px;}
+		article:nth-of-type(2){width: 20%; height: 20%;} /* 높이는 동작하지 않는다. */
+		article:nth-of-type(3){width: 10vw; height: 10vw;}
+		article:nth-of-type(4){width: 10vh; height: 10vh;}
+		
+		/*margin 적용 */
+		
+		.c1 article{width: 50px; height: 30px; border: 1px solid green;}
+		
+		/*margin: 상하좌우 20px / padding: 10px */
+		.c1 article:nth-of-type(1) {margin: 20px; padding: 10px}
+		
+		/*margin: 상하 20px, 좌우 20px / padding: 상하 10px, 좌우 20px*/
+		.c1 article:nth-of-type(2) {margin: 20px 50px; padding: 10px 20px}
+		
+		/*margin: 상하 20px, 좌우 중앙*/
+		.c1 article:nth-of-type(3) {margin: 20px auto;}
+		
+		/*margin: 상 20px, 좌우 중앙, 하 40px */
+		.c1 article:nth-of-type(4) {margin: 20px auto 40px;}
+		
+		/*margin 상 0px, 우 10px, 하 20px, 좌 30px(위부터 시계방향 작성)*/
+		.c1 article:nth-of-type(5) {margin: 0px 10px 20px 30px;}
+		
+		/*margin : 상 20px  */
+		.c1 article:nth-of-type(8) {margin-top: 20px;}
+		
+		/*margin : 우 20px  */
+		.c1 article:nth-of-type(7) {margin-right: 20px;}
+		
+		/*margin : 하 20px  */
+		.c1 article:nth-of-type(9) {margin-bottom: 20px;}
+		
+		/*margin : 좌 20px  */
+		.c1 article:nth-of-type(6) {margin-left: 20px;}
+		
+		
+		/* boxsize 적용 */
+		#mybox-1, #mybox-2{width: 200px; height: 100px; border: 1px solid red;}
+		#mybox-1{padding: 0px}
+		#mybox-2{padding: 40px; box-sizing: content-box;}
+	</style>
+</head>
+<body>
+	<!--
+	1. width height : content가 들어가는 영역 지정
+		*블록레벨에서만 사용, 인라인은 사용 못함
+		width height 설정 단위
+		1) px => 픽셀 단위, 절대크기
+		2) %  => 부모 태그 기준으로 %단위로 지정
+			=> 너비는 웹 브라우저의 크기가 변하면 바뀐다.
+			=> 높이는 변하지 않는다.(웹은 생성될 때 contant의 양에 따라 이미 높이를 정해놓기 때문이다.)
+			
+		ex) 웹브라우저가 width=800px, height=1000px이면
+			1vw = 1/100*100px, 2vh=2/100*1000px 이다.
+		3) vw(View Width)  => 웹 브라우저의 너비를 기준으로 너비와 높이를 백분율로 지정
+		4) vh(View Height) => 웹 브라우저의 높이를 기준으로 너비와 높이를 백분율로 지정
+	2. margin : 테두리 영역에서부터 바깥쪽 영역 
+	3. padding : content영역과 테두리 영역 사이의 안쪽 영역
+	4. box-sizing
+		1) content-box : width와 height가 적용 되는 블록을 content영역으로 지정한다.(모든 태그의 디폴트값)
+		2) border-box : width와 height가 적용 되는 블록을 padding영역과 테두리 영역으로 변경한다.
+						때문에 padding과 테두리 영역을 설정하면 content영역이 변화하게 된다.
+	-->
+	<p id="p1">블록레벨입니다.</p>
+	<span id="s1">인라인 요소입니다.</span>
+	<hr>
+	
+	<!-- width, height 젹용 -->
+	<div>
+		<article>100px</article>
+		<article>20%</article>
+		<article>10vw</article>
+		<article>10vh</article>
+	</div>
+	<hr>
+	
+	<!-- margin, padding 적용 -->
+	<img src="../cssimages/img01.png">
+	<div class="c1">
+		<article>box1</article>
+		<article>box2</article>
+		<article>box3</article>
+		<article>box4</article>
+		<article>box5</article>
+		<article>box6</article>
+		<article>box7</article>
+		<article>box8</article>
+		<article>box9</article>
+	</div>
+	<hr>
+	
+	<!-- box-size 속성 -->
+	<div id="mybox-1">MyBox1</div>
+	<div id="mybox-2">MyBox2</div>
+	
+</body>
+</html>

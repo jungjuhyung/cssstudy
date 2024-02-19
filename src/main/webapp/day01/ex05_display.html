@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		#in {border: 1px solid red; display: inline;}
+		#bl {border: 1px dashed blue; display: block;}
+		#no {border: 1px dashed blue; display: none;}
+		#ib {border: 1px solid red; display: inline-block;}
+		
+		/* class t1의 p태그와 strong에 속성 추가 */
+		/* strong과 em은 인라인 요소이기 때문에 일반적으로 height속성이 적용되지 않는다. */
+		/* display: inline-block; 속성을 통해 strong과 em의 블록을 변경 */
+		.t1 > p{border: 1px solid red; height: 100px;}
+		.t1 strong, em{border: 1px solid blue; height: 50px; display: inline-block;}
+	</style>
+</head>
+<body>
+	<!--
+	display : value
+		속성값 종류
+		inline => 요소를 inline속성으로 변경
+		block  => 요소를 block속성으로 변경
+		inline-block => 배치는 인라인 처리, 블록레벨 요소의 속성을 추가할 수 있다(width, height 등)
+		none   => 표시하지 않는다.(삭제된 것이 아닌 숨기는 것이기때문에 소스코드 상에는 보인다.)
+		table  => 요소를 table속성으로 변경
+	-->
+	<p id="in">여기는 블록레벨</p>
+	<span id="bl">여기는 인라인</span>
+	<span id="no">여기는 none</span>
+	<p id="ib">여기는 블록레벨 inline-black</p>
+	<hr>
+	
+	<!--123~126page 연습-->
+	
+	<!-- 블록레벨, 인라인 크기 지정 -->
+	<div class="t1">
+	<p>블록 요소 태그는 자동 줄 바꿈 됩니다.</p>
+	<p>
+		<span>
+			<strong>인라인 요소 태그</strong>들은 <em>좌우로</em>배치됩니다.
+		</span>
+	</p>
+	</div>
+	
+</body>
+</html>

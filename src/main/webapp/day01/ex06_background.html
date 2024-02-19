@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		p{background-color: red;}
+		span{background-color: blue;}
+		
+		/* image 배경 형식 지정 */
+		#s1{width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/pattern.png);}
+		
+		#s2{width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/pattern.png);
+		background-repeat: repeat;}
+		
+		#s3{width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/pattern.png);
+		background-repeat: no-repeat;}
+		
+		#s4{width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/pattern.png);
+		background-repeat: repeat-x;}
+		
+		#s5{width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/pattern.png);
+		background-repeat: repeat-y;}
+		
+		/* 이미지 위치 지정 */
+		#s6{width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/pattern.png);
+		background-repeat: no-repeat;
+		/* 가로축 위치, 세로축 위치 */
+		background-position: center center;}
+		
+		#s7{width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/pattern.png);
+		background-repeat: no-repeat;
+		background-position: right bottom;}
+		
+		#s8{width: 200px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/pattern.png);
+		background-repeat: no-repeat;
+		/* 부모블록의 좌측상단 기준으로 x축이동, y축 이동 이다. */
+		background-position: 20px 60px;}
+		
+		/* image 사이즈 지정 contain */
+		/* image 비율을 유지하면서 블록을 벗어나지 않는 범위 내에서 꽉 채운다. 빈공간이 생길 수 있다. */
+		#s9{width: 300px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/rose.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: contain;
+		}
+		
+		/* image 사이즈 지정 cover */
+		/* image 비율을 유지하면서 블록을 꽉채우는 방식 */
+		#s10{width: 300px;
+		height: 200px;
+		border: 1px solid #000;
+		background-image: url(../cssimages/rose.jpg);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		}
+	</style>
+</head>
+<body>
+	<p>블록레벨 입니다.</p>
+	<span>인라인 입니다.</span>
+	
+	<!--
+	배경 그림
+	background-image : url(이미지 경로 및 url) => 디폴트 바둑판식
+	background-repeat : 
+	-->
+	
+	<section id="s1"></section>
+	<section id="s2"></section>
+	<section id="s3"></section>
+	<section id="s4"></section>
+	<section id="s5"></section>
+	<section id="s6"></section>
+	<section id="s7"></section>
+	<section id="s8"></section>
+	<section id="s9"></section>
+	<section id="s10"></section>
+	
+</body>
+</html>
