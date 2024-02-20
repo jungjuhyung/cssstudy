@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		div{
+		width: 200px;
+		height: 200px;
+		background-color: yellow;
+		position: relative;
+		border: 1px solid black;
+		}
+		.abs{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: absolute;
+		top: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div>
+		<div class="abs"></div>
+		<!-- abs가 absolute속성이기 때문에 p태그가 abs블록 흐름의 영향을 받지 않는다. -->
+		<p>한국 ict 인재 개발원</p>
+	</div>
+</body>
+</html>

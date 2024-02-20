@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+	
+		/* %단위는 각 모서리의 몇%를 둥글게 할 지 지정하는 단위
+			따라서 각각 50%이면 4군데 모두 둥글어지기 때문에 원이 된다. */
+		/* px단위는 각 모서리의 몇px만큼 둥글게 할지 지정하는 단위
+			따라서 각각 100px이면 원이 된다. */
+		/* 100px = 50% */
+		.box1{
+		width: 200px;
+		height: 200px;
+		background-color: blue;
+		margin: 100px;
+		float: left;
+		border-radius: 80px;
+		}
+		.box2{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+		margin: 100px;
+		float: left;
+		border-radius: 40%;
+		}
+		#container{
+		width: 350px;
+		clear: both;
+		}
+		img {
+		border: 1px solid #666;
+		border-radius: 50%;
+		box-shadow: 5px 5px 10px #000;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<div class="box2"></div>
+	<div id="container">
+		<img src="../cssimages/bear.jpg">
+	</div>
+</body>
+</html>

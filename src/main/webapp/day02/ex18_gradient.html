@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		div{
+		width: 200px;
+		height: 200px;
+		float: left;
+		margin: 50px;
+		border: 1px solid #000;
+		}
+		/*
+		그레디언트 => 2가지 색상이 점차 변하는 효과
+		linear-gradient(방향, 색상1, 색상2, ...); => 직선 모양의 그레디언트
+		radial-gradient(색상1, 색상2); => 원형 모양의 그레이디언트
+				첫번째 색이 가운데부터 퍼져나가면서 색상이 변함
+		*/
+		div:nth-of-type(1) {
+		/* 첫번째 색부터 아래로 내려가는 방향 */
+		background: linear-gradient(to bottom, blue, red);
+		}
+		div:nth-of-type(2) {
+		/* 첫번째 색부터 위로 올라가는 방향 */
+		background: linear-gradient(to top, blue, red);
+		}
+		div:nth-of-type(3) {
+		/* 첫번째 색부터 오른쪽으로 이동하는 방향 */
+		background: linear-gradient(to right, blue, red);
+		}
+		div:nth-of-type(4) {
+		/* 첫번째 색부터 왼쪽으로 이동하는 방향 */
+		background: linear-gradient(to left, blue, red);
+		}
+		div:nth-of-type(5) {
+		/* 첫번째 색부터 45도 위로 올라가는 방향 */
+		background: linear-gradient(45deg, blue, red);
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>	
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		section{
+		width: 600px;
+		height: 200px;
+		}
+		section:nth-of-type(1){
+		background-color: pink;
+		}
+		section:nth-of-type(2){		
+		background-color: lightblue;
+		position: relative;
+		top: -100px;
+		left: 100px;
+		}
+		section:nth-of-type(3){
+		background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<!--
+	position : 위치를 지정하는 속성
+		주요 속성값
+		- top, bottom, left, right : 위치값을 지정하는 속성들
+			**각 모서리에서 밀어내면 +, 잡아당기면 -값이라고 생각하면 편하다.
+			**만일 기준 요소가 있으면 기준 요소의 top에서 값만큼, bottom에서 값만큼, left에서 값만큼 이동한다.
+		- static : 기본값, 문서의 흐름에 거스르지 않음, 다른 요소와 겹치지 않음
+				   position의 하위속성인 top, bottom, left, right 속성에 영향을 받지 않는다.
+		- relative : 적용된 요소의 현재 위치값을 기준으로 이동 가능(상대 좌표)
+					 아래 요소는 위치 변경 전 요소의 흐름을 따라간다.
+		- absolute : 일반적인 문서흐름을 제거 하고, 가까운 position이 적용된 부모요소에 대해 상대적으로 위치 지정
+					 만약에  position이 적용된 부모요소가 없으면 body태그를 기준으로 이동(절대 좌표)
+					 **위치값을 지정하지 않으면 그대로 있고 위치값을 지정하는 순간 body태그를 기준으로 움직인다.
+					 ** 즉, 포지션이 적용된 부모 요소의 자식 요소의 위치를 지정할 때 사용
+		- fixed : 일반적인 문서흐름을 제거하고, 지정한 위치 고정(절대좌표)
+				  스크롤을 내려도 웹상의 고정자리에 계속 위치한다.
+		- sticky : 일반적인 문서흐름을 제거하고, 원래 위치에 있다가 스크롤이 위치에 맞춰서 따라온다.
+				   ** 스크롤에 따라 움직이기 때문에 top, bottom 속성만 적용된다.
+				   ** top속성 시 스크롤로 자기 위치를 벗어나면 상단에 위치하면서 따라온다.
+				   ** bottom속성 시 스크롤로 자기 위치를 벗어나기 전까지 웹페이지의 하단에 위치하여 따라오다가
+				   	  자기 위치를 벗어나면 사라진다.
+	-->
+	<section></section>
+	<section></section>
+	<section></section>
+</body>
+</html>

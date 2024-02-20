@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		/*
+		a{
+		text-decoration: none;
+		}
+		
+		article {
+		border: 1px solid red;
+		}
+		
+		ul li{
+		border: 1px solid blue;
+		list-style-type: none;
+		}
+		*/
+		
+		
+		
+		/* body태그에는 기본적으로 margin속성값 부여되어있다. */
+		/* 따라서 body태그를 포함한 태그들을 화면에 딱맞춰서 작업하기 위해
+		모든 태그에 margin 0px, padding 0px를 주고 시작한다. */
+		/* 그 외 text 밑줄이나 liststyle 등을 을 초기화해놓고 작업하기 위해 none값을 주고 시작한다. */
+		*{
+		margin: 0px;
+		padding: 0px;
+		}
+		
+		/* Float를 이용한 좌우 배치 */
+		
+		#header{
+		background-color: lightgray;
+		padding: 30px;
+		text-align: center;
+		font-size: 30px;
+		color: white;
+		}
+		
+		#nav{
+		background-color: #f1f1f1;
+		}
+		
+		#nav:after{
+		content: '';
+		display: block;
+		clear: both;
+		}
+		
+		ul{
+		list-style-type: none;
+		}
+		li {
+		margin : 10px 40px;
+		float: left;
+		}
+		.wrap .left{
+		width: 30%;
+		height: 400px;
+		background-color: pink;
+		float: left;
+		}
+
+		.wrap .right{
+		width: 70%;
+		height: 400px;
+		background-color: lightblue;
+		float: left;
+		}
+		
+		/*가상 요소 after : 작성된 요소의 끝에 가상의 content블록을 추가시키는 속성"*/
+		/* clear : float 해제 */
+		/* float 처리 후 마지막에 float의 영향을 받지 않는 가상의 블록 요소를 삽입해서 div를 지정한다*/
+		.wrap:after{
+		content: '';
+		display: block;
+		clear: both;
+		}
+		#footer{
+		background-color: lightgray;
+		padding: 10px;
+		text-align: center;
+		font-size: 20px;
+		color: white;
+		}
+	</style>
+</head>
+<body>
+	<!-- 	
+	<article>
+		<ul>
+			<li>list</li>
+			<li>list</li>
+		</ul>
+		<a href="#">link</a>
+	</article>
+	<hr>
+	-->
+	
+	<!-- Float를 이용한 블록요소 좌우 배치 -->
+	
+	<div id="header">
+		<h1>헤더부분</h1>
+	</div>
+	<div id="nav">
+		<ul>
+			<li>메뉴1</li>
+			<li>메뉴2</li>
+			<li>메뉴3</li>
+		</ul>
+	</div>
+	<div class="wrap">
+		<section class="left"></section>
+		<section class="right"></section>
+	</div>
+	<div id="footer">
+		<p>footer</p>
+		<p>footer</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		div{
+		width: 400px;
+		height: 400px;
+		border: 1px solid #000;
+		float: left;
+		margin: 50px;
+		}
+		div img{
+		width: 100%;
+		height: 100%;
+		}
+		.box1 img{
+		/* 원래 비율을 무시하고 블록에 맞게 비율을 조정해서 꽉채우기 */
+		object-fit: fill;
+		}
+		.box2 img{
+		/* 원래 비율을 유지한채로 좌우를 잘라내면서 꽉채우기 */
+		object-fit: cover;
+		}
+		.box3 img{
+		/* 원래 비율을 유지한채로 잘리는 부분 없이 x축 또는 y축이 닿을 때까지 채우기 */
+		object-fit: contain;
+		}
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<img alt="자동차" src="../cssimages/car1.jpg">
+	</div>
+	
+	<div class="box2">
+		<img alt="자동차" src="../cssimages/car1.jpg">
+	</div>
+	
+	<div class="box3">
+		<img alt="자동차" src="../cssimages/car1.jpg">
+	</div>
+	
+</body>
+</html>
