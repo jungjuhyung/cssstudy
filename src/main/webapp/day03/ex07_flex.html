@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		*{
+		margin: 0px;
+		padding: 0px;
+		}
+		main{
+		width: 100%;
+		height: 100vh;
+		background-color: lightcyan;
+		}
+		section{
+		border: 10px solid blue;
+		display: flex; /* 자신은 블록 레벨 유지, 자식 요소는 flex환경 설정 */
+		/* display: inline-flex; */ /* 자신은 인라인 요소로 변경, 자식 요소는 flex환경 설정 */
+		flex-direction: row; /* 기본축을 가로 기준으로 변경 , 기본축이 자식요소를 정렬하는 기준이 된다.*/
+		/* flex-direction: column; */ /* 기본축을 세로 기준으로 변경*/
+		/* -reverse를 뒤에 붙이면 블록 자체를 반대로 뒤집는다. */
+		
+		flex-wrap: wrap; /* 자식이 부모크기를 넘어서면 줄바꿈 하기 */
+		/* flex-wrap: nowrap; */ /*기본값, 자식이 부모크기를 넘어서면 줄바꿈하지 않고 자식 요소의 크기가 일정 비율에 맞춰 줄어든다. */
+		}
+		
+		/* wrap과 direction 속성 한번에 사용하기 */
+		/* flex-flow: row wrap */
+		section article{
+		width: 100px;
+		height: 100px;
+		background-color: aqua;
+		border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<section>
+			<article></article>
+			<article></article>
+			<article></article>
+			<article></article>
+			<article></article>
+			<article></article>
+			<article></article>
+		</section>
+	</main>
+</body>
+</html>

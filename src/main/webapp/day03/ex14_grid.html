@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		#wrapper{
+		display: grid;
+		/* 3개의 열을 만들고 각각 너비 200px 지정 */
+		/* grid-template-columns: 200px 200px 200px; */
+		
+		/* 자신의 크기 기준 너비 비율로 열의 너비 지정 */
+		grid-template-columns: 1fr 1fr 1fr;
+		/* grid-template-columns: repeat(3,1fr); */ /* 3개의 열을 만들고 1fr로 지정한다. */
+		
+		/* 1행에 대한 높이 지정 */
+		grid-template-rows: 200px 200px;
+		
+		/* 셀 사이의 간격 지정 */
+		/* 행 사이 간격, 열 사이 간격 */
+		grid-gap: 20px 50px;
+		}
+		
+		.items{
+		padding: 10px;
+		background-color: #eee;
+		}
+		.items:nth-of-type(odd) {background-color: #bbb;}
+	</style>
+</head>
+<body>
+	<!--
+	display:grid => 자신을 블록으로 지정
+	display: inline-grid => 자신을 inline으로 지정
+	
+	자식 항목들을 grid cell이라고 한다.
+	지정하지 않은 행열은 content 크기를 따라간다.(content크기를 따라갈때는 가장 큰 항목의 크기를 따라간다.)
+		열의 갯수 및 크기지정 - grid-template-columns : 1번째열값  2번째열값 ...
+		행의 크기 및 크기지정 - grid-template-rows : 1번째행값 2번째행값
+		기본축 사용자지정 - grid-template-areas
+		
+	grid-gap : 셀 간의 여백 설정
+		grid-column-gap
+		grid-row-gap
+		
+	그리드 영역 : 그리드 셀의 시작 지점 설정
+		grid-column-start;
+		grid-column-end;
+		grid-row-start;
+		grid-row-end;
+		grid-area;
+	-->
+	<div id="wrapper">
+    	<div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+    	Amet, reprehenderit.Lorem ipsum dolor, sit amet consectetur adipisicing elit. </div>
+    	<div class="items">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    	Lorem ipsum dolor, sit amet consectetur adipisicing elit</div>
+    	<div class="items">Lorem ipsum dolor sit amet.Lorem ipsum dolor, 
+    	sit amet consectetur adipisicing elit</div>
+    	<div class="items">Lorem ipsum dolor sit.Lorem ipsum dolor, 
+    	sit amet consectetur adipisicing elit</div>
+    	<div class="items">Lorem, ipsum dolor.</div>
+  </div>
+	
+</body>
+</html>

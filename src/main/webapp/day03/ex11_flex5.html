@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style type="text/css">
+		section{
+		width: 100%;
+		background-color: lightcyan;
+		display: flex;
+		}
+		section article{
+		width: 400px;
+		box-sizing: border-box;
+		background-color: aqua;
+		border: 1px solid black;
+		font-size: 50px;
+		color: white;
+		}
+		/* 여백 축소하기 */
+		/* flex-shrink: 축소시킬 때 자식의 안 쪽 영역이 각각 축소되는 가중치를 지정하는 속성 */
+		/* 값이 작을 수록 더 많이 축소된다. */
+		/* section article:nth-of-type(1) {flex-shrink: 1;}
+		section article:nth-of-type(1) {flex-shrink: 2;}
+		section article:nth-of-type(1) {flex-shrink: 3;} */
+		
+		/* 전체 영역를 일정한 비율로 자식요소에 할당하기 */
+		section article:nth-of-type(1) {flex: 1;}
+		section article:nth-of-type(1) {flex: 2;}
+		section article:nth-of-type(1) {flex: 3;}
+	</style>
+</head>
+<body>
+	<section>
+		<article>FLEX SHRINK</article>
+		<article>FLEX SHRINK</article>
+		<article>FLEX SHRINK</article>
+	</section>
+</body>
+</html>

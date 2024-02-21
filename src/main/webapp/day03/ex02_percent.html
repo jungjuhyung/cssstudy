@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>가변 레이아웃</title>
+	<style type="text/css">
+		*{
+		box-sizing: border-box;
+		margin: 0px;
+		padding: 0px;
+		}
+		.container{
+		width: 90%;
+		margin: 0 auto;
+		text-align: center;
+		}
+		.header{
+		width: 100%;
+		height: 100px;
+		background-color: tomato;
+		}
+		.main{
+		float : left;
+		width: 67%;
+		height: 100px;
+		background-color: orange;
+		/* margin과 padding의 %는 부모 요소의 너비를 기준으로 비율 크기가 정해진다. */
+		margin: 10%;
+		padding: 10%;
+		}
+		.aside{
+		float : left;
+		width: 33%;
+		height: 100px;
+		background-color: olive;
+		padding: 10%;
+		}
+
+		.footer{
+		clear : both;
+		width: 100%;
+		height: 100px;
+		background-color: maroon;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="header">HEADER</div>
+		<div class="main">MAIN</div>
+		<div class="aside">ASIDE</div>
+		<div class="footer">FOOTER</div>
+	</div>
+	
+	
+</body>
+</html>
